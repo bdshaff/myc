@@ -144,6 +144,63 @@ List myc_eigen(NumericMatrix A, double margin = 1e-20){
 }
 
 // [[Rcpp::export]]
+List myc_svd(NumericMatrix A, double margin = 1e-20){
+  int ncol = A.cols();
+  int nrow = A.rows();
+  if(ncol >= nrow){
+    NumericMatrix X = myc_matmult(A, transpose(A));
+    List E = myc_eigen(X);
+    NumericVector d = E["values"];
+    d = sqrt(d);
+    NumericMatrix U = E["vectors"];
+    NumericMatrix S(d.length(), d.length());
+    for(int i = 0; i < d.length(); i++){
+      for(int j = 0; j < d.length(); j++)
+        if(i == j){
+          S(i,j) = 1.0/d(i);
+        }
+    }
+    
+    NumericMatrix O = myc_matmult(transpose(U),A);
+    NumericMatrix V = myc_matmult(S, O);
+    V = transpose(V);
+    
+    List L = List::create(Named("d") = d,
+                          Named("U") = U,
+                          Named("V") = V,
+                          Named("S") = S);
+    
+    return L;
+    
+  }else{
+    NumericMatrix X = myc_matmult(transpose(A), A);
+    List E = myc_eigen(X);
+    NumericVector d = E["values"];
+    d = sqrt(d);
+    NumericMatrix V = E["vectors"];
+    NumericMatrix S(d.length(), d.length());
+    for(int i = 0; i < d.length(); i++){
+      for(int j = 0; j < d.length(); j++)
+        if(i == j){
+          S(i,j) = 1.0/d(i);
+        }
+    }
+    
+    NumericMatrix O = myc_matmult(A,V);
+    NumericMatrix U = myc_matmult(O,S);
+    
+    List L = List::create(Named("d") = d,
+                          Named("U") = U,
+                          Named("V") = V,
+                          Named("S") = S);
+    
+    return L;
+  }
+  
+  
+}
+
+// [[Rcpp::export]]
 List myc_dist(NumericMatrix A){
   int nn = A.rows();
   NumericMatrix DD(nn,nn);
@@ -196,9 +253,9 @@ List myc_dist(NumericMatrix A){
 */
 
 /*** R
-myc_dist(matrix(c(1, 2, 3,
-                  2, 3, 4,
-                  4, 5, 6), ncol = 3))
+# myc_dist(matrix(c(1, 2, 3,
+#                   2, 3, 4,
+#                   4, 5, 6), ncol = 3))
 */
 
 

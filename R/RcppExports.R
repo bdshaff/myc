@@ -21,6 +21,10 @@ myc_eigen <- function(A, margin = 1e-20) {
     .Call(`_myc_myc_eigen`, A, margin)
 }
 
+myc_svd <- function(A, margin = 1e-20) {
+    .Call(`_myc_myc_svd`, A, margin)
+}
+
 myc_dist <- function(A) {
     .Call(`_myc_myc_dist`, A)
 }

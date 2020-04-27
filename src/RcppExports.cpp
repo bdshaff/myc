@@ -63,6 +63,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// myc_svd
+List myc_svd(NumericMatrix A, double margin);
+RcppExport SEXP _myc_myc_svd(SEXP ASEXP, SEXP marginSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type A(ASEXP);
+    Rcpp::traits::input_parameter< double >::type margin(marginSEXP);
+    rcpp_result_gen = Rcpp::wrap(myc_svd(A, margin));
+    return rcpp_result_gen;
+END_RCPP
+}
 // myc_dist
 List myc_dist(NumericMatrix A);
 RcppExport SEXP _myc_myc_dist(SEXP ASEXP) {
@@ -91,6 +103,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_myc_myc_diag", (DL_FUNC) &_myc_myc_diag, 1},
     {"_myc_myc_qr", (DL_FUNC) &_myc_myc_qr, 1},
     {"_myc_myc_eigen", (DL_FUNC) &_myc_myc_eigen, 2},
+    {"_myc_myc_svd", (DL_FUNC) &_myc_myc_svd, 2},
     {"_myc_myc_dist", (DL_FUNC) &_myc_myc_dist, 1},
     {"_myc_rcpp_hello_world", (DL_FUNC) &_myc_rcpp_hello_world, 0},
     {NULL, NULL, 0}
