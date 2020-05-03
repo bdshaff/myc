@@ -13,11 +13,13 @@ ok..
 
 `myc_proj`
 
-`myc_qr`
-
 `myc_matmult`
 
 `myc_diag`
+
+`myc_dist`
+
+`myc_qr`
 
 `myc_eigen`
 
