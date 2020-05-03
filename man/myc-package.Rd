@@ -3,7 +3,7 @@
 \alias{myc}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  A package with some functions implimented with Rcpp
 }
 \description{
   A more detailed description of what the package does. A length
@@ -14,9 +14,9 @@
   package, including the most important functions.
 }
 \author{
-Your Name, email optional.
+Ben Denis Shaffer
 
-Maintainer: Your Name <your@email.com>
+Maintainer: Ben Denis Shaffer <your@email.com>
 }
 \references{
   This optional section can contain literature or other references for
