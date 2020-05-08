@@ -2,7 +2,12 @@
 #include <cmath>
 using namespace Rcpp;
 
-
+//' myc_proj
+//'
+//' Compute vector projection.
+//'
+//' @param u NumericVector
+//' @param a NumericVector
 // [[Rcpp::export]]
 NumericVector myc_proj(NumericVector u, NumericVector a) {
   
@@ -25,6 +30,12 @@ NumericVector myc_proj(NumericVector u, NumericVector a) {
   return proj;
 }
 
+//' myc_matmult
+//'
+//' Matrix Multiplication
+//'
+//' @param A NumericMatrix
+//' @param B NumericMatrix
 // [[Rcpp::export]]
 NumericMatrix myc_matmult(NumericMatrix A, NumericMatrix B) {
         
@@ -50,6 +61,11 @@ NumericMatrix myc_matmult(NumericMatrix A, NumericMatrix B) {
         return res;
 }
 
+//' myc_diag
+//'
+//' Compute vector projection.
+//'
+//' @param A NumericMatrix
 // [[Rcpp::export]]
 NumericVector myc_diag(NumericMatrix A){
   int n = A.nrow();
@@ -62,6 +78,11 @@ NumericVector myc_diag(NumericMatrix A){
   return vec;
 }
 
+//' myc_qr
+//'
+//' Compute QR Factorization
+//'
+//' @param A NumericMatrix
 // [[Rcpp::export]]
 List myc_qr(NumericMatrix A) {
   
@@ -111,6 +132,11 @@ List myc_qr(NumericMatrix A) {
   
 }
 
+//' myc_eigen
+//'
+//' Compute Eigen
+//'
+//' @param A NumericMatrix
 // [[Rcpp::export]]
 List myc_eigen(NumericMatrix A, double margin = 1e-20){
   List QR = myc_qr(A);
@@ -143,6 +169,11 @@ List myc_eigen(NumericMatrix A, double margin = 1e-20){
 
 }
 
+//' myc_svd
+//'
+//' Compute SVD
+//'
+//' @param A NumericMatrix
 // [[Rcpp::export]]
 List myc_svd(NumericMatrix A, double margin = 1e-20){
   int ncol = A.cols();
@@ -200,6 +231,11 @@ List myc_svd(NumericMatrix A, double margin = 1e-20){
   
 }
 
+//' myc_dist
+//'
+//' Compute Distance
+//'
+//' @param A NumericMatrix
 // [[Rcpp::export]]
 List myc_dist(NumericMatrix A){
   int nn = A.rows();
