@@ -15,7 +15,7 @@ ok..
 
 `myc_proj`
 
-```{c++}
+```c++
 
 NumericVector myc_proj(NumericVector u, NumericVector a) {
   
