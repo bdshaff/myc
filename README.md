@@ -15,7 +15,7 @@ devtools::install_github("bdshaff/myc")
 
 # See how I use it
 
-On my website bdshaff.github.io I authored a couple blog posts that talk about linear algebra and discuss the computation of matrix decompositions along with a couple applications. I use the `myc` package there so you can take a look at that if you want.
+On my website [bdshaff.github.io](bdshaff.github.io) I authored a couple blog posts that talk about linear algebra and discuss the computation of matrix decompositions along with a couple applications. I use the `myc` package there so you can take a look at that if you want.
 
 ## Functions
 
