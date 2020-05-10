@@ -1,8 +1,9 @@
 # myc
 
-`myc` is an R package with several functions wiritten in C++. The purpous was for me to 
-a. learn C++ and Rcpp 
-b. revise some linear algebra and impliment matrix factorizations commonly used in data science.
+`myc` is an R package with several functions wiritten in C++. The purpous was for me to:
+
+1. Learn C++ and Rcpp 
+2. Revise some linear algebra and impliment matrix factorizations commonly used in data science.
 
 # Download if you want
 
@@ -15,7 +16,7 @@ devtools::install_github("bdshaff/myc")
 
 # See how I use it
 
-On my website [bdshaff.github.io](https://bdshaff.github.io/) I authored a couple blog posts that talk about linear algebra and discuss the computation of matrix decompositions along with a couple applications. I use the `myc` package there so you can take a look at that if you want.
+On my website [bdshaff.github.io](https://bdshaff.github.io/bdshaff.github.io/blog/) I authored a couple blog posts that talk about linear algebra and discuss the computation of matrix decompositions along with a couple applications. I use the `myc` package there so you can take a look at that if you want.
 
 ## Functions
 
