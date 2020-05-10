@@ -100,7 +100,7 @@ List myc_dist(NumericMatrix A){
 ```
 
 `myc_qr`
-```
+```c++
 List myc_qr(NumericMatrix A) {
   int a = A.rows();
   int b = A.cols();
