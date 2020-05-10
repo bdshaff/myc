@@ -13,7 +13,13 @@ devtools::install_github("bdshaff/myc")
 
 ```
 
+# See how I use it
+
+On my website bdshaff.github.io I authored a couple blog posts that talk about linear algebra and discuss the computation of matrix decompositions along with a couple applications. I use the `myc` package there so you can take a look at that if you want.
+
 ## Functions
+
+The main objective for me was to impliment the SVD matrix decomposition that is so central in Data Science. Along the way the QR decompopistion, and the Eigenvalue decompositions naturally happened too. Because I was not using anything beyond Rcpp like RcppArmadillo or RcppEigenI had to write a couple other functions along the way to do matrix multipliaction and extracting the diagonal of a matrix along with a couple other functions.
 
 Here is the list of functions and their code. You can find the actual C++ code in the src/ directory.
 
