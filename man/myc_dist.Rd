@@ -9,6 +9,9 @@ myc_dist(A)
 \arguments{
 \item{A}{NumericMatrix}
 }
+\value{
+List
+}
 \description{
 Compute Distance
 }

@@ -9,6 +9,9 @@ myc_qr(A)
 \arguments{
 \item{A}{NumericMatrix}
 }
+\value{
+List
+}
 \description{
 Compute QR Factorization
 }

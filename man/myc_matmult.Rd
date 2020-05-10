@@ -11,6 +11,9 @@ myc_matmult(A, B)
 
 \item{B}{NumericMatrix}
 }
+\value{
+NumericMatrix
+}
 \description{
 Matrix Multiplication
 }

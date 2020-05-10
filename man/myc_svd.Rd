@@ -9,6 +9,9 @@ myc_svd(A, margin = 1e-20)
 \arguments{
 \item{A}{NumericMatrix}
 }
+\value{
+List
+}
 \description{
 Compute SVD
 }

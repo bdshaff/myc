@@ -7,6 +7,7 @@
 #'
 #' @param u NumericVector
 #' @param a NumericVector
+#' @return NumericVector
 myc_proj <- function(u, a) {
     .Call(`_myc_myc_proj`, u, a)
 }
@@ -17,6 +18,7 @@ myc_proj <- function(u, a) {
 #'
 #' @param A NumericMatrix
 #' @param B NumericMatrix
+#' @return NumericMatrix
 myc_matmult <- function(A, B) {
     .Call(`_myc_myc_matmult`, A, B)
 }
@@ -26,6 +28,7 @@ myc_matmult <- function(A, B) {
 #' Compute vector projection.
 #'
 #' @param A NumericMatrix
+#' @return NumericVector
 myc_diag <- function(A) {
     .Call(`_myc_myc_diag`, A)
 }
@@ -35,6 +38,7 @@ myc_diag <- function(A) {
 #' Compute QR Factorization
 #'
 #' @param A NumericMatrix
+#' @return List
 myc_qr <- function(A) {
     .Call(`_myc_myc_qr`, A)
 }
@@ -44,6 +48,7 @@ myc_qr <- function(A) {
 #' Compute Eigen
 #'
 #' @param A NumericMatrix
+#' @return List
 myc_eigen <- function(A, margin = 1e-20) {
     .Call(`_myc_myc_eigen`, A, margin)
 }
@@ -53,6 +58,7 @@ myc_eigen <- function(A, margin = 1e-20) {
 #' Compute SVD
 #'
 #' @param A NumericMatrix
+#' @return List
 myc_svd <- function(A, margin = 1e-20) {
     .Call(`_myc_myc_svd`, A, margin)
 }
@@ -62,6 +68,7 @@ myc_svd <- function(A, margin = 1e-20) {
 #' Compute Distance
 #'
 #' @param A NumericMatrix
+#' @return List
 myc_dist <- function(A) {
     .Call(`_myc_myc_dist`, A)
 }

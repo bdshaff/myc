@@ -9,6 +9,9 @@ myc_diag(A)
 \arguments{
 \item{A}{NumericMatrix}
 }
+\value{
+NumericVector
+}
 \description{
 Compute vector projection.
 }

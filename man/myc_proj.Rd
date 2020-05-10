@@ -11,6 +11,9 @@ myc_proj(u, a)
 
 \item{a}{NumericVector}
 }
+\value{
+NumericVector
+}
 \description{
 Compute vector projection.
 }
