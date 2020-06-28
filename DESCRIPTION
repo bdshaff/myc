@@ -7,6 +7,6 @@ Author: Ben Denis Shaffer
 Maintainer: Ben Denis Shaffer <bendenisshaffer@gmail.com>
 Description: Functions implimented using Rcpp.
 License: GPL (>= 2)
-Imports: Rcpp (>= 1.0.3)
+Imports: Rcpp (>= 1.0.4.6)
 LinkingTo: Rcpp
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
