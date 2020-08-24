@@ -1,5 +1,7 @@
 # myc
 
+hey from my comp
+
 `myc` is an R package with several functions wiritten in C++. The purpous was for me to:
 
 1. Learn C++ and Rcpp 
